@@ -10,7 +10,7 @@ Enter the descriptions for birds and click on "Search", nine (fake) birds images
 
 The heart of the app is the text encoding and the GAN model, which is under the `model` folder. The notebooks in this folder are:
 
-`model/data.ipynb`: the dataset used for training is the [Caltech-UCSD Birds 200](http://www.vision.caltech.edu/visipedia/CUB-200.html) [3]. This notebook extracts, preprocesses and splits the hd5 dataset from [this repo](https://github.com/aelnouby/Text-to-Image-Synthesis). This makes it easier to use the[fastai](https://docs.fast.ai/) library. See the next section for the folder structure.
+`model/data.ipynb`: the dataset used for training is the [Caltech-UCSD Birds 200](http://www.vision.caltech.edu/visipedia/CUB-200.html) [3]. This notebook extracts, preprocesses and splits the hd5 dataset from [this repo](https://github.com/aelnouby/Text-to-Image-Synthesis). This makes it easier to use the [fastai](https://docs.fast.ai/) library. See the next section for the folder structure.
 
 `model/lm.ipynb`: train a language model and a classifier for text encoding.
 
@@ -37,10 +37,9 @@ data/
 
 ### Text Encoding
 
-In Ref. [1], the text encoding is done by the authors' previous work in Ref. [2]. In Ref. [2], the author fed the bird images (both right and wrong classes) together with the bird description texts to train a classifier. Then the encoder part of the classifier is used to encode bird description texts. However 
-TODO:
-
 In here, a ULMFiT language model and a text classifier is used for text embedding. A language model is trained first, with all the description texts. Then the encoder part (AWD LSTM) is used to construct a text classifier, and the classifier is trained to classify different birds. Label smoothing is used in the classifier training. Finally, the encoder part is extracted and will be used for text embedding later.
+
+The text encoding part in Ref. [1] is done by the authors' previous work [2]. In Ref. [2], the author fed the bird images (both right and wrong classes) together with the bird description texts to train a model. Then the encoder part of the model is used to encode bird description texts. Apparently the approach in Ref. [2] is more optimized for this specific problem. ULMFiT only takes information from the text, not the corresponding images.
 
 ### Image Generation
 
@@ -126,5 +125,7 @@ The website icon is from: http://www.iconarchive.com/
 # References
 
 [1] [Generative Adversarial Text-to-Image Synthesis](https://arxiv.org/abs/1605.05396)
+
 [2] [Learning Deep Representations of Fine-grained Visual Descriptions](http://arxiv.org/abs/1605.05395)
+
 [3] [Caltech-UCSD Birds 200](http://www.vision.caltech.edu/visipedia/CUB-200.html)
