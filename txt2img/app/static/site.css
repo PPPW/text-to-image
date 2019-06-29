@@ -1,0 +1,31 @@
+body {
+    font-family: "Snell Roundhand", cursive;
+    background-image: linear-gradient(to right, #1590fb, #c2e9fb, #1590fb);
+}
+
+#title {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+#input-wrap {    
+    margin: auto;
+    width: 400px;
+}
+
+.img-row{
+    text-align: center;
+}
+
+img {
+    display: inline-block;
+    margin: 3px;
+}
+
+footer {    
+    position: fixed;
+    bottom: 0;   
+    left: 45%;
+}

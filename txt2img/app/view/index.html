@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>    
+    <title>Txt to Image</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">        
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon" />   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href='../static/site.css'>
+    <script type="text/javascript" src='../static/app.js'></script>
+</head>
+
+<body>
+    <div id="title">
+        Who are you looking for, <br />
+        in the Kingdom of Bird?
+    </div>
+
+    <div id="input-wrap">        
+        <textarea class="form-control" id="description" 
+            placeholder="E.g.: this bird has wings that are grey and has a white belly..."></textarea>
+        <button class="btn btn-primary" id="submit">Search</button>      
+    </div>
+
+    <div id="imgs">     
+    </div>
+
+    <!-- <div id='loader'><img src="../static/images/spinner.gif"/></div> -->
+
+    <footer>
+        Source code in <a href="https://github.com/PPPW/">Github</a>
+    </footer>
+</body>
+
+</html>
